@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AirbnbListingsView: View {
+    @StateObject var viewModel = AirbnbListingsViewModel()
+    
     var body: some View {
         Text("Listing")
     }
