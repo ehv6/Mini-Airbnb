@@ -23,13 +23,15 @@ final class APIService{
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
-            guard let data, error == nil else {
-                completion (.failure(error ?? URLError.badURL))
+            guard let data = data, error == nil else {
+                if let error {
+                    completion(.failure(error))
+                }
                 return
             }
             
             do {
-                let response = JSONDecoder().decode(AirbnbListingsResponse.self, from: data)
+                let response = try JSONDecoder().decode(AirbnbListingsResponse.self, from: data)
                 completion(.success(response.results))
             } catch {
                 completion(.failure(error))
