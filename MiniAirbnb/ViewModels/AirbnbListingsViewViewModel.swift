@@ -18,7 +18,7 @@ final class AirbnbListingsViewViewModel: ObservableObject {
             {
             case .success(let models):
                 self?.listings = models
-            case .failure(let failure):
+            case .failure:
                 break
             }
         }

@@ -11,6 +11,11 @@ struct AirbnbListingsView: View {
     @StateObject var viewModel = AirbnbListingsViewViewModel()
     
     var body: some View {
-        Text("Listing")
+        NavigationView {
+            Text("Loading")
+        }
+        .onAppear {
+            viewModel.fetchListings()
+        }
     }
 }
