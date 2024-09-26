@@ -12,10 +12,14 @@ struct AirbnbListingsView: View {
     
     var body: some View {
         NavigationView {
-            Text("Loading")
-        }
-        .onAppear {
-            viewModel.fetchListings()
+            List(viewModel.listings) { listing in
+                NavigationLink(destination: Text("Hello")) {
+                    AirbnbListingCardView(model: listing)
+                }
+            }
+            .onAppear {
+                viewModel.fetchListings()
+            }
         }
     }
 }

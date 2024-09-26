@@ -9,7 +9,15 @@ import Foundation
 import SwiftUI
 
 struct AirbnbListingCardView: View{
-    var body: some View{
-        Text("Listing")
+    let model: AirbnbListing
+    
+    var body: some View {
+        HStack {
+            AsyncImage(url: URL(string: model.thumbnail_url ?? ""))
+            
+            Text(model.name ?? "Lisitng")
+                .font(.title)
+                .bold()
+        }
     }
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct AirbnbListing: Codable {
+struct AirbnbListing: Codable, Hashable, Identifiable {
     
-    let id: String?
+    let id: String
     let listing_url: String?
     let name: String?
     let summary: String?
