@@ -1,5 +1,5 @@
 //
-//  AirbnbListingsView.swift
+//  ContentView.swift
 //  MiniAirbnb
 //
 //  Created by Tushig Battulga on 9/26/24.
@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct AirbnbListingsView: View {
+struct ContentView: View {
     var body: some View {
-        Text("Listing")
+        AirbnbListingsView() 
     }
+}
+
+#Preview {
+    ContentView()
 }
