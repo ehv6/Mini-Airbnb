@@ -29,9 +29,30 @@
 		52C7AA932CA5416A00FF161E /* MiniAirbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniAirbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5251DDBB2CB483AF009A97E7 /* Exceptions for "MiniAirbnb" folder in "MiniAirbnbTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52C7AA882CA5416A00FF161E /* MiniAirbnbTests */;
+		};
+		5251DDBC2CB483AF009A97E7 /* Exceptions for "MiniAirbnb" folder in "MiniAirbnbUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52C7AA922CA5416A00FF161E /* MiniAirbnbUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		52C7AA7A2CA5416900FF161E /* MiniAirbnb */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5251DDBB2CB483AF009A97E7 /* Exceptions for "MiniAirbnb" folder in "MiniAirbnbTests" target */,
+				5251DDBC2CB483AF009A97E7 /* Exceptions for "MiniAirbnb" folder in "MiniAirbnbUITests" target */,
+			);
 			path = MiniAirbnb;
 			sourceTree = "<group>";
 		};
