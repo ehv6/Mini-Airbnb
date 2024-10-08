@@ -7,27 +7,44 @@
 
 import SwiftUI
 
-struct AirbnbListingCardView: View{
+struct AirbnbListingCardView: View {
     let model: AirbnbListing
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: model.thumbnail_url ?? ""))
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .clipped()
-            
-            VStack {
+            // Remove thumbnail_url since it's not available in the new API
+            VStack(alignment: .leading, spacing: 5) {
                 Text(model.name ?? "Listing")
                     .lineLimit(1)
                     .font(.title3)
                     .bold()
                 
-                Text(model.description ?? "Listing")
+                // Assuming you might want to display the neighbourhood
+                Text("Neighbourhood: \(model.neighbourhood ?? "Unknown Neighbourhood")")
                     .foregroundColor(.secondary)
-                    .lineLimit(3)
-                    .font(.body)
+                    .lineLimit(1)
+                    .font(.subheadline)
+
+                // Show the price (column_10)
+                if let price = model.price {
+                    Text("Price: $\(price)")
+                        .foregroundColor(.primary)
+                        .font(.subheadline)
+                } else {
+                    Text("Price: N/A")
+                        .foregroundColor(.primary)
+                        .font(.subheadline)
+                }
+                
+//                // Optionally show coordinates (latitude, longitude)
+//                if let coordinates = model.coordinates {
+//                    Text("Location: \(coordinates.lat), \(coordinates.lon)")
+//                        .foregroundColor(.secondary)
+//                        .lineLimit(1)
+//                        .font(.footnote)
+//                }
             }
         }
+        .padding()
     }
 }
