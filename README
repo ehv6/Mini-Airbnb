@@ -4,19 +4,16 @@ Overview
 
 MiniAirbnb is a SwiftUI-based application that allows users to browse and view listings of properties available for rent, emulating a simplified version of the Airbnb platform. The app fetches property listings from an external API, presenting users with key information about each listing, including the property name, location, pricing, and availability.
 
-Features
-
+Features:
 Property Listings: View a list of properties with details such as name, neighbourhood, room type, minimum nights required, and price.
 Dynamic Data Fetching: The app fetches data from a public API to display real-time listings.
 User-Friendly Interface: Built with SwiftUI to provide a clean and responsive user experience.
 Recent Updates
 
-API Change
-As of [insert date of API change], the project has been updated to adapt to changes in the Airbnb listings API. The previous API endpoint has been replaced with a new one, leading to the following adjustments:
+API Change:
+**Currently, the project is being updated to adapt to changes in the Airbnb listings API. The previous API endpoint has been replaced with a different format and fields, leading to the following adjustments being made:
 
 New API Endpoint: The application now pulls data from the updated API endpoint:
-perl
-Copy code
 https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/air-bnb-listings/records?limit=100&lang=en&timezone=America%2FNew_York&refine=city%3A%22New-york-city%22&refine=room_type%3A%22Entire%20home%2Fapt%22
 Updated Data Structure: The response format has changed, necessitating updates to the data models. Key changes include:
 Removal of fields such as thumbnail_url, listing_url, and other previous properties that are no longer provided.
@@ -24,13 +21,10 @@ Introduction of new properties like coordinates, allowing for geographical repre
 Code Refactoring: The Swift models (AirbnbListing and AirbnbListingCardView) have been refactored to accommodate the new data structure, ensuring seamless integration and display of updated listings.
 Getting Started
 
-Prerequisites
+Prerequisites:
 Xcode 13 or later
 Swift 5.0 or later
-Installation
-Clone the repository:
-bash
-Copy code
-git clone [repository-url]
+
+Running:
 Open the project in Xcode.
 Run the app on a simulator or physical device.
