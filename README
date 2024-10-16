@@ -1,30 +1,38 @@
-MiniAirbnb
+# MiniAirbnb
 
-Overview
+A SwiftUI-based application that allows users to browse and view listings of properties available for rent, emulating a simplified version of the Airbnb platform.
 
-MiniAirbnb is a SwiftUI-based application that allows users to browse and view listings of properties available for rent, emulating a simplified version of the Airbnb platform. The app fetches property listings from an external API, presenting users with key information about each listing, including the property name, location, pricing, and availability.
+## Features
+- Property Listings: View a list of properties with details such as name, neighborhood, room type, minimum nights required, and price.
+- Dynamic Data Fetching: The app fetches data from a public API to display real-time listings.
+- User-Friendly Interface: Built with SwiftUI to provide a clean and responsive user experience.
 
-Features:
-Property Listings: View a list of properties with details such as name, neighbourhood, room type, minimum nights required, and price.
-Dynamic Data Fetching: The app fetches data from a public API to display real-time listings.
-User-Friendly Interface: Built with SwiftUI to provide a clean and responsive user experience.
-Recent Updates
+## Recent Updates
+### API Change
+**Currently, the project is being updated to adapt to changes in the Airbnb listings API. The previous API endpoint has been replaced with a different format and fields, leading to the following adjustments being made:**
 
-API Change:
-**Currently, the project is being updated to adapt to changes in the Airbnb listings API. The previous API endpoint has been replaced with a different format and fields, leading to the following adjustments being made:
-
-New API Endpoint: The application now pulls data from the updated API endpoint:
+- **New API Endpoint:** The application now pulls data from the updated API endpoint:
 https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/air-bnb-listings/records?limit=100&lang=en&timezone=America%2FNew_York&refine=city%3A%22New-york-city%22&refine=room_type%3A%22Entire%20home%2Fapt%22
-Updated Data Structure: The response format has changed, necessitating updates to the data models. Key changes include:
-Removal of fields such as thumbnail_url, listing_url, and other previous properties that are no longer provided.
-Introduction of new properties like coordinates, allowing for geographical representation of listings.
-Code Refactoring: The Swift models (AirbnbListing and AirbnbListingCardView) have been refactored to accommodate the new data structure, ensuring seamless integration and display of updated listings.
-Getting Started
 
-Prerequisites:
-Xcode 13 or later
-Swift 5.0 or later
+- **Updated Data Structure:** The response format has changed, necessitating updates to the data models. Key changes include:
+- Removal of fields such as `thumbnail_url`, `listing_url`, and other previous properties that are no longer provided.
+- Introduction of new properties like `coordinates`, allowing for geographical representation of listings.
 
-Running:
-Open the project in Xcode.
-Run the app on a simulator or physical device.
+- **Code Refactoring:** The Swift models (`AirbnbListing` and `AirbnbListingCardView`) have been refactored to accommodate the new data structure, ensuring seamless integration and display of updated listings.
+
+## Requirements
+- Xcode 13 or later
+- Swift 5.0 or later
+
+## Running the Application
+1. Open the project in Xcode.
+2. Run the app on a simulator or physical device.
+
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+Thanks to the Swift and SwiftUI communities for their support in making this project possible.
