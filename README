@@ -20,7 +20,7 @@ https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/air-bnb-listin
 - Removal of fields such as `thumbnail_url`, `listing_url`, and other previous properties that are no longer provided.
 - Introduction of new properties like `coordinates`, allowing for geographical representation of listings.
 
-- **Code Refactoring:** The Swift models (`AirbnbListing` and `AirbnbListingCardView`) have been refactored to accommodate the new data structure, ensuring seamless integration and display of updated listings.
+- **Code Refactoring:** The Swift models (`AirbnbListing` and `AirbnbListingCardView`) have been refactored to accommodate the new data structure, ensuring seamless integration and display of updated listings. 
 
 ## Requirements
 - Xcode 13 or later
